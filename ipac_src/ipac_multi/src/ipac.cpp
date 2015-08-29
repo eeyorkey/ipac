@@ -946,7 +946,7 @@ void ipac::dump_info(const char* info_file)
     // model_weight
     fprintf(f_writer, "model");
     fprintf(f_writer, " %f", _model_bias);  // bias
-    for (int i = 0; i < _d_J; i ++) {
+    for (int i = 0; i < _d_D; i ++) {
         fprintf(f_writer, " %f", _model_weight[i]);  // weight
     }
     fprintf(f_writer, "\n");
