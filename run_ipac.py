@@ -2,9 +2,9 @@ import sys, getopt, os
 import env, ipac_task_scheduler
 import data_loader_scheduler
 
-short_opt = "hp:w:a:s:fd:"
+short_opt = "hp:w:a:fd:"
 long_opt = ["help", "pval=", "weight=", "annotation=", \
-    "solution_path=", "fig_solution_path", "work_dir="]
+    "fig_solution_path", "work_dir="]
     
 def print_help():
     print "TODO: please fillin the help information"
@@ -18,7 +18,6 @@ except getopt.GetoptError:
 pvalue_file = ""
 weight_file = ""
 annotation_file = ""
-solution_path = ""
 work_dir = ""
 solution_path_plt = False
 
@@ -32,8 +31,6 @@ for opt,value in opts:
         weight_file = value
     elif opt in ("-a", "--annotation"):
         annotation_file = value
-    elif opt in ("-s", "--solution_path"):
-        solution_path = value
     elif opt in ("-f", "--fig_solution_path"):
         solution_path_plt = True
     elif opt in ("-d", "--work_dir"):
@@ -49,6 +46,6 @@ if work_dir != "":
  
 ipac = ipac_task_scheduler.IpacTaskScheduler()
 ipac.init(pvalue_file, weight_file, annotation_file, \
-    solution_path, work_dir, solution_path_plt)
+    work_dir, solution_path_plt)
 ipac.run_task()
    

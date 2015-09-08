@@ -9,20 +9,18 @@ class IpacTaskScheduler:
         self.f_pval = ""
         self.f_weight = ""
         self.f_annotation = ""
-        self.f_solution_path = ""
         self.f_workdir = ""
         self.plt_solution_path = False
         self.params = {}
         
     def init(self, f_pval, f_weight, f_annotation, \
-        f_solution_path, f_workdir, solution_path_plt):
+        f_workdir, solution_path_plt):
         if f_workdir == "":
             f_workdir = "./"
         
         self.f_pval = f_pval
         self.f_weight = f_weight
         self.f_annotation = f_annotation
-        self.f_solution_path = f_solution_path
         self.f_workdir = f_workdir
         self.plt_solution_path = solution_path_plt
         self.params = {}
