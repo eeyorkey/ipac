@@ -991,7 +991,7 @@ void ipac::dump_info(const char* info_file)
     }
     f_writer << std::endl;
     
-    //f_writer.close();
+    f_writer.close();
 }
 
 }  // namespace ipac
