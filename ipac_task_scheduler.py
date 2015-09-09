@@ -32,7 +32,7 @@ class IpacTaskScheduler:
             sys.exit(1)
             
         data_scheduler = data_loader_scheduler.DataLoaderScheduler()
-        pval_data = data_scheduler.get_data(self.f_pval, "data_loader_pval")
+        pval_data = data_scheduler.get_data(self.f_pval, env.pvalue_data_loader)
         
         ipac_version = "single"
         self.params = {"work_dir":self.f_workdir}
@@ -46,10 +46,10 @@ class IpacTaskScheduler:
         annotation_data = []
         
         if self.f_weight != "":
-            weight_data = data_scheduler.get_data(self.f_weight, "data_loader_weight")
+            weight_data = data_scheduler.get_data(self.f_weight, env.weight_data_loader)
             
         if self.f_annotation != "":
-            annotation_data = data_scheduler.get_data(self.f_annotation, "data_loader_annotation")
+            annotation_data = data_scheduler.get_data(self.f_annotation, env.annotation_data_loader)
             
         data = {"pval":pval_data, "weight":weight_data, "annotation":annotation_data}
         data_cb = data_combiner.DataCombiner()
