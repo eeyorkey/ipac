@@ -170,7 +170,7 @@ int ipac::EMStageOne()
         }
         
         // Can we stop
-        if (_stage_one_loglik[i+1] - _stage_one_loglik[i] < _options.eps_stop_loglik) {
+        if (_stage_one_loglik[i+1] - _stage_one_loglik[i] < _options.eps_stop_loglik * _stage_one_loglik[i]) {
             break;
         }
     }
@@ -434,7 +434,7 @@ int ipac::EMStageTwo() {
 
             _iter_num[cv] = i + 1;
             // Can we stop
-            if (_stage_two_loglik[cv][i+1] - _stage_two_loglik[cv][i] < _options.eps_stop_loglik) {
+            if (_stage_two_loglik[cv][i+1] - _stage_two_loglik[cv][i] < _options.eps_stop_loglik * _stage_two_loglik[cv][i]) {
                 fprintf(stdout, "cv %d: Iteration=%d,loglik=%f; Iteration=%d,loklik=%f\n",
                     cv, i, _stage_two_loglik[cv][i], (i+1), sum_loglik);
                 break;
