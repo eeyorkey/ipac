@@ -223,7 +223,7 @@ void print_help(int argc, char** argv)
     cout << "\t-e|--test_path\t\tTesting data path(file name)" << endl;
     cout << "\t-m|--more_n\t\tMore iteratons numers(Integer >= 1)" << endl;
     cout << "\t-i|--init_train_only (if pval-only)" << endl;
-	cout << "\t-n|--iter_n\t\tMax iteration (Integer >=1)" << endl;
+    cout << "\t-n|--iter_n\t\tMax iteration (Integer >=1)" << endl;
     cout << "\t-k|--iter_n_init\t\tMax iteration for StageOne(Integer >=1)" << endl;
     cout << "\t-s|--stop_eps\t\tLikelihood delta for stop (Float)" << endl;
     cout << "\t-r|--learning_rate\tLearning rate for boosting (Float)" << endl;
