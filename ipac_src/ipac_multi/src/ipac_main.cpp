@@ -234,7 +234,8 @@ void print_help(int argc, char** argv)
 {
     cout << argv[0] << "  options(values). Options are as follows:" << endl;
     cout << "\t-h|--help\t\tThis help" << endl;
-    cout << "\t-l|--init_train_n\tIteration number for pre-training" << endl;
+    cout << "\t-d|--dump_info_path\tPath for dumping model information in text" << endl;
+    cout << "\t-k|--init_train_n\tIteration number for pre-training" << endl;
     cout << "\t-i|--init_train_only\tOnly run pre-training" << endl;
     cout << "\t-l|--label_num\t\tThe number of classes" << endl;
     cout << "\t-x|--exe_mode\t\tExecution mode(train|test|more)" << endl;

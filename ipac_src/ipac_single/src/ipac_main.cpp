@@ -218,6 +218,7 @@ void print_help(int argc, char** argv)
 {
     cout << argv[0] << "  options(values). Options are as follows:" << endl;
     cout << "\t-h|--help\t\tThis help" << endl;
+    cout << "\t-d|--dump_info_path\tPath for dumping model information in text" << endl;
     cout << "\t-x|--exe_mode\t\tExecution mode(train|test|more)" << endl;
     cout << "\t-t|--train_path\t\tTraining data path(file name)" << endl;
     cout << "\t-e|--test_path\t\tTesting data path(file name)" << endl;
